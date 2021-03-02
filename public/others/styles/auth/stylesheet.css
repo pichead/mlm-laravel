@@ -1,0 +1,99 @@
+/* Sticky Footer Classes */
+@import "https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;400;500;600;700&display=swap";
+html,
+body {
+  height: 100%;
+  font-family: 'Prompt', sans-serif;
+  background: #fafafa;
+  margin-bottom: 0px;
+}
+
+#page-content {
+  flex: 1 0 auto;
+
+}
+
+#sticky-footer {
+  flex-shrink: none;
+}
+
+.form-wrapper{
+  background-color: white;
+  padding:50px 30px;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  border-radius:10px;
+
+}
+
+.v-header{
+  font-size: 30px;
+}
+
+.color-green{
+  color:#bfa979;
+}
+
+.btn-v-login{
+  width: 150px;
+  font-size:14px;
+  padding: 3px 2px;
+  height: 40px;
+}
+
+
+
+.btn-v-edit{
+  background-color: #6ed0e0;
+  color: white;
+}
+.btn-v-edit:hover{
+  background-color: white;
+  color: #6ed0e0;
+  border:solid #6ed0e0 1px;
+  cursor: pointer;
+}
+
+.text-pink{
+  color:#afbab7;
+}
+.pink-holder::placeholder {
+  color: #afbab7 !important;
+  opacity: 1; /* Firefox */
+}
+.pink-border{
+
+	border: solid #afbab7 1px;
+}
+
+/* Other Classes for Page Styling */
+
+/* body {
+  background: #007bff;
+  background: linear-gradient(to right, #0062E6, #33AEFF);
+} */
+
+.topbar{
+  height: 65px;
+  /* background-image: linear-gradient(to left, #a5d9d8 , white); */
+  background-color: white;
+  border-bottom: solid #afbab7 2px;;
+
+
+}
+.topbar-logo{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 40px;
+  height: 50px;
+  width: auto;
+}
+
+.footer{
+  /* background-image: linear-gradient(to left, #a5d9d8 , white);
+  color: #bfa979;
+   */
+   
+   color:white;
+   background-color: #a5d9d8;
+}

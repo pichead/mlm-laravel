@@ -1,41 +1,41 @@
-
-@media screen and (max-width:1200px) {
-	table.table-mobile {
-		word-wrap:break-word;
-	}
-	table.table-mobile thead {
-		display:none
-	}
-	table.table-mobile td {
-		display:block;
-		float:left;/* ie9 and under hack */
-		width:100%;
-		clear:both;
-		background:white;
-		padding:10px 5px;
-		-moz-box-sizing:border-box;
-		-webkit-box-sizing:border-box;
-		box-sizing:border-box;
-    /* padding-left: 20px; */
-
-		/* margin-right: 15px; */
-
-
-
-	}
-	table.table-mobile tbody, table.table-mobile tr {
-		display:block
-	}
-	.table-mobile td:before {
-		content:attr(data-th);
-		/* display:block; */
-		font-weight:normal;
-		margin:0 0 2px;
-		color:#000;
-	}
-	.table-mobile tbody tr {
-		float:left;width:100%;
-
-    margin-bottom:40px;
-
-	}
+
+@media screen and (max-width:1200px) {
+	table.table-mobile {
+		word-wrap:break-word;
+	}
+	table.table-mobile thead {
+		display:none
+	}
+	table.table-mobile td {
+		display:block;
+		float:left;/* ie9 and under hack */
+		width:100%;
+		clear:both;
+		background:white;
+		padding:10px 5px;
+		-moz-box-sizing:border-box;
+		-webkit-box-sizing:border-box;
+		box-sizing:border-box;
+    /* padding-left: 20px; */
+
+		/* margin-right: 15px; */
+
+
+
+	}
+	table.table-mobile tbody, table.table-mobile tr {
+		display:block
+	}
+	.table-mobile td:before {
+		content:attr(data-th);
+		/* display:block; */
+		font-weight:normal;
+		margin:0 0 2px;
+		color:#000;
+	}
+	.table-mobile tbody tr {
+		float:left;width:100%;
+
+    margin-bottom:40px;
+
+	}

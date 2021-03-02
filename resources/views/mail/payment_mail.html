@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+    <div>
+        <h2>V Dealer</h2>
+
+        <p>เรื่อง {{ $data['subject'] }} </p>
+
+        <p>คุณ {{ $data['downline'] }} ได้ทำการแจ้งโอนเงิน รายละเอียดดังนี้</p>
+        <p>เลขที่สั่งซื้อสินค้า : {{ $data['purchase_no'] }}</p>
+
+        <br>
+
+        <p>รายการสินค้า</p>
+        <table id="tb-stocks" class="mt-2 mb-4">
+            <thead>
+                <tr class="m-0 table-success py-1">
+                    <td class="text-lg-center sorting_disabled" >No.</td>
+                    <td class="text-lg-center sorting_disabled" >รายการสินค้า</td>
+                    <td class="text-lg-center sorting_disabled" >จำนวน</td>
+                    <td class="text-lg-center sorting_disabled">ราคา</td>
+                </tr>
+            </thead>
+
+            <tbody>
+            @foreach($Order as $Order_row)
+                @php
+                    $name = App\Models\Stock::where('id',$Order_row->stock_id)->first();                   
+                @endphp
+                <tr role="row" class="row m-0 py-1">
+                <td class="text-lg-center">{{$loop->index+1}}</td>
+                <td class="">{{$name->name}}</td>
+                <td class="text-lg-right">{{number_format($Order_row->amount,0)}}</td>
+                    @foreach($priceitem as $price_row)
+                        @if($Order_row->amount >= $price_row->start_total && $Order_row->amount <= $price_row->end_total && $price_row->stock_id == $Order_row->stock_id)
+                            @php
+                                $amount = $Order_row->amount;
+                                $priceperunit = $price_row->price;
+                                $total = $amount * $priceperunit;
+
+                            @endphp
+                            
+                            <td class="text-lg-right">{{number_format($total,2)}}</td>
+                        @endif
+                    @endforeach
+                </tr>
+            @endforeach
+            </tbody>
+                <tfoot>
+                    <td class="mt-2 text-right font-weight-bold">ยอดสั่งซื้อ(บาท) {{number_format($Price,2)}}</td>
+                </tfoot>
+        </table>
+
+        <br>
+
+        <p>โอนไปที่ธนาคาร : {{ $data['bank'] }} เลขบัญชี {{ $data['bank_acc'] }}</p>
+        <p>วันที่ชำระเงิน : {{ $data['time'] }}</p>
+        <p>ยอดสั่งซื้อ : {{ number_format($data['price'],2) }}</p>
+        <p>ยอดโอน : {{ number_format($data['pay_price'],2) }}</p>
+
+
+        <p>หากคุณเป็นสมาชิก V Dealer สามารถ <span><a href="{{'localhost'.'/'.'downline'.'/'.'public'.'/'.'payment'.'/'.$data['purchase_id']}}">คลิกที่นี่</a></span> เพื่อดูรายละเอียด</p>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>No.</th>
+                    <th>รายการสินค้า</th>
+                    <th>จำนวน</th>
+                    <th>ราคา</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>jdoe@gmail.com</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4" class="text-right">ยอดสั่งซื้อ(บาท) {{number_format($Price,2)}}</td>
+                </tr>
+            </tfoot>
+        </table>
+
+    </div>
+</body>
+</html>

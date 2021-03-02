@@ -1,0 +1,43 @@
+/* // Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap */
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {  }
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+  .create-user-container{
+    padding-left: 70px;
+    padding-right:70px;
+  }
+
+
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+.form-wrapper{
+  padding: 60px 100px;
+}
+
+.separated-half-line{
+  width: 50%;
+}
+
+ }
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+
+  .tb-search-wrapper{
+    padding-right: 15px;
+  }
+
+.btn-sub-add-products{
+  height: 35px;
+  padding-top: 6px;
+}
+}

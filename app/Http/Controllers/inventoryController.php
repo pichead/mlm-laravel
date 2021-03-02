@@ -14,7 +14,7 @@ class inventoryController extends Controller
     public function index()
     {
         $Inventory = Inventory::paginate(10);
-        return view('inventory/index')->with('Inventory',$Inventory);
+        return view('inventory.index')->with('Inventory',$Inventory);
     }
 
     /**
@@ -24,7 +24,7 @@ class inventoryController extends Controller
      */
     public function create()
     {
-        return view('inventory/create');
+        return view('inventory.create');
     }
 
     /**

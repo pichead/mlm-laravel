@@ -1,0 +1,58 @@
+
+/* blue btn */
+.blue-btn {
+    background-color: #72CAFF;
+    color:white;
+    border: 1px solid #72CAFF;
+}
+.blue-btn:hover {
+    background-color: white;
+    color:#72CAFF;
+}
+
+
+
+/* red btn */
+.red-btn {
+    background-color: #FF8D8D; 
+    color:white;
+    border: 1px solid #FF8D8D;
+}
+.red-btn:hover{
+    color: #FF8D8D; 
+    background-color:white;
+}
+
+/* green btn */
+.green-btn {
+    background-color: #58d6cc;
+    color: White;
+    border: 1px solid #58d6cc;
+}
+.green-btn:hover {
+    color: #58d6cc;
+    background-color: White;
+}
+
+/* hblue btn */
+.hblue-btn {
+    background-color: #2499cf;
+    color:white;
+    border: 1px solid #2499cf;
+}
+.hblue-btn:hover{
+    color: #2499cf;
+    background-color:white;
+}
+
+
+/* purple btn */
+.purple-btn {
+    background-color: #D7B0EF;
+    color:white;
+    border: 1px solid #D7B0EF;
+}
+.purple-btn:hover {
+    color: #D7B0EF; 
+    background-color:white;
+}

@@ -54,6 +54,23 @@
               </div>
             </form>
             <br>
+           
+            <form>
+              <div class="form-row">
+                  <div class="col-4 my-auto">
+                      เวลาที่โอนเงิน
+                  </div>
+                  <div class="col">
+                    <div class="row m-0">
+                      <input type="number" class="col-9 form-control" placeholder="ระบุจำนวนเงิน">
+                      <div class="col-3 my-auto">บาท</div>
+                    </div>
+                  </div>
+              </div>
+            </form>
+            <br>
+            <div>จาก</div>
+            <br>
             <form>
               <div class="form-row">
                   <div class="col-4 my-auto">
@@ -68,17 +85,45 @@
             <form>
               <div class="form-row">
                   <div class="col-4 my-auto">
-                      เวลาที่โอนเงิน
+                      เลขที่บัญชี
                   </div>
                   <div class="col">
-                    <div class="row m-0">
-                      <input type="number" class="col-9 form-control" placeholder="ระบุจำนวนเงิน">
-                      <div class="col-3 my-auto">บาท</div>
-                    </div>
+                      <input type="text" class="form-control" placeholder="ระบุเลขบัญชี">
                   </div>
               </div>
             </form>
+            <br>
+            <div>โอนไปที่</div>
+            <br>
+            <form>
+              <div class="form-row">
+                  <div class="col-4 my-auto">
+                      ธนาคาร
+                  </div>
+                  <div class="col">
+                      <input type="text" class="form-control" placeholder="ระบุธนาคาร">
+                  </div>
+              </div>
+            </form>
+            <br>
+            <form>
+              <div class="form-row">
+                  <div class="col-4 my-auto">
+                      เลขที่บัญชี
+                  </div>
+                  <div class="col">
+                      <input type="text" class="form-control" placeholder="ระบุเลขบัญชี">
+                  </div>
+              </div>
+            </form> 
           </div>
+
+
+
+
+
+
+
           <div class="col-md-6 col-12">
             <div class="row align-items-center col-12 w-100 h-100" style="border-style: dashed ;">
 
